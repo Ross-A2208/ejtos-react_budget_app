@@ -1,8 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
 
+
 const AllocationForm = (props) => {
-    const { dispatch,remaining  } = useContext(AppContext);
+    const { dispatch,remaining,currency  } = useContext(AppContext);  
 
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
@@ -42,21 +43,21 @@ const AllocationForm = (props) => {
                 <label className="input-group-text" htmlFor="inputGroupSelect01">Department</label>
                   </div>
                   <select className="custom-select" id="inputGroupSelect01" onChange={(event) => setName(event.target.value)}>
-                        <option defaultValue>Choose...</option>
-                        <option value="Marketing" name="marketing"> Marketing</option>
-                <option value="Sales" name="sales">Sales</option>
-                <option value="Finance" name="finance">Finance</option>
-                <option value="HR" name="hr">HR</option>
-                <option value="IT" name="it">IT</option>
-                <option value="Admin" name="admin">Admin</option>
+                  <label style={{ marginLeft: "2rem" }}>{currency}</label>  <option defaultValue>Choose...</option>
+                        <label style={{ marginLeft: "2rem" }}>{currency}</label>   <option value="Marketing" name="marketing"> Marketing</option>
+                        <label style={{ marginLeft: "2rem" }}>{currency}</label> <option value="Sales" name="sales">Sales</option>
+                        <label style={{ marginLeft: "2rem" }}>{currency}</label> <option value="Finance" name="finance">Finance</option>
+                        <label style={{ marginLeft: "2rem" }}>{currency}</label> <option value="HR" name="hr">HR</option>
+                        <label style={{ marginLeft: "2rem" }}>{currency}</label> <option value="IT" name="it">IT</option>
+                        <label style={{ marginLeft: "2rem" }}>{currency}</label>  <option value="Admin" name="admin">Admin</option>
                   </select>
 
                     <div className="input-group-prepend" style={{ marginLeft: '2rem' }}>
                 <label className="input-group-text" htmlFor="inputGroupSelect02">Allocation</label>
                   </div>
                   <select className="custom-select" id="inputGroupSelect02" onChange={(event) => setAction(event.target.value)}>
-                        <option defaultValue value="Add" name="Add">Add</option>
-                <option value="Reduce" name="Reduce">Reduce</option>
+                  <label style={{ marginLeft: "2rem" }}>{currency}</label>  <option defaultValue value="Add" name="Add">Add</option>
+                        <label style={{ marginLeft: "2rem" }}>{currency}</label>  <option value="Reduce" name="Reduce">Reduce</option>
                   </select>
 
                     <input
