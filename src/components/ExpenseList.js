@@ -3,8 +3,8 @@ import ExpenseItem from './ExpenseItem';
 import { AppContext } from '../context/AppContext';
 
 const ExpenseList = () => {
-    const { expenses } = useContext(AppContext);
-
+    const { currency,expenses } = useContext(AppContext);
+<label style={{ marginLeft: "2rem" }}>{currency}</label>
     return (
         <table className='table'>
               <thead className="thead-light">
