@@ -18,6 +18,14 @@ const Budget = () => {
 				payload: val,
 			})
 			}
+            if(val>20000) {
+                alert("You cannot increase Budget more than 20000!");
+            } else {
+                dispatch({
+                    type: 'SET_BUDGET',
+                    payload: val,
+                })
+                }
 	}
 	
 	return (
